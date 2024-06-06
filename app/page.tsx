@@ -1,12 +1,10 @@
 import Button from "@/ui/button/button";
-import Image from "next/image";
+import CloseRoundIcon from "@/ui/icons/close-round-icon";
 
 export default function Home() {
   return (
     <main className="">
-      <Button size="lg" category="warning">
-        one
-      </Button>
+      <input />
     </main>
   );
 }

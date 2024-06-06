@@ -1,5 +1,6 @@
 import { svgSizeConversion } from "@/core/util/svg-size-conversion";
 import React from "react";
+import { ButtonSize } from "../button/types";
 
 function CloseRoundIcon({
   width,
@@ -10,7 +11,7 @@ function CloseRoundIcon({
   width?: number;
   height?: number;
   color?: string;
-  size?: string;
+  size?: ButtonSize;
 }) {
   const sizeDimension = svgSizeConversion(size ?? "base");
   return (

@@ -1,4 +1,6 @@
-export const svgSizeConversion = (size: string): string => {
+import { ButtonSize } from "@/ui/button/types";
+
+export const svgSizeConversion = (size: ButtonSize): string => {
     switch (size) {
         case "xs":
         return "16";

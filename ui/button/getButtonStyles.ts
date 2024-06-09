@@ -6,23 +6,25 @@ export const getButtonStyles = (
 ) => {
   const buttonSize = getButtonSize(btnSize);
 
+  const commonStyles = `capitalize flex flex-row justify-center items-center max-w-fit w-full font-bold ${buttonSize} border-solid hover:opacity-90 transition-opacity duration-200 ease-in-out`;
+
   switch (category) {
     case "primary":
-      return `capitalize flex flex-row justify-center items-center   max-w-fit  w-full bg-cyan-100 font-bold text-cyan-900 ${buttonSize} border-solid  border-cyan-900`;
+      return `${commonStyles} bg-cyan-100 text-cyan-900 border-cyan-900`;
     case "secondary":
-      return `capitalize flex flex-row justify-center items-center   max-w-fit  w-full bg-violet-100 font-bold text-violet-900 ${buttonSize} border-solid  border-violet-900`;
+      return `${commonStyles} bg-violet-100 text-violet-900 ${buttonSize} border-violet-900`;
     case "tertiary":
-      return `capitalize flex flex-row justify-center items-center   max-w-fit  w-full bg-pink-100 font-bold text-pink-900 ${buttonSize} border-solid  border-pink-900`;
+      return `${commonStyles} bg-pink-100 text-pink-900  border-pink-900`;
     case "info":
-      return `capitalize flex flex-row justify-center items-center   max-w-fit  w-full bg-blue-100 font-bold text-blue-900 ${buttonSize} border-solid  border-blue-900`;
+      return `${commonStyles} bg-blue-100 text-blue-900  border-blue-900`;
     case "warning":
-      return `capitalize flex flex-row justify-center items-center   max-w-fit  w-full bg-amber-500 font-bold text-amber-100 ${buttonSize} border-solid  border-amber-900`;
+      return `${commonStyles} bg-amber-500 text-amber-100  border-amber-900`;
     case "danger":
-      return `capitalize flex flex-row justify-center items-center   max-w-fit  w-full bg-rose-600 font-bold text-rose-50 ${buttonSize} border-solid  border-rose-700`;
+      return `${commonStyles} bg-rose-600 text-rose-50  border-rose-700`;
     case "success":
-      return `capitalize flex flex-row justify-center items-center   max-w-fit  w-full bg-lime-500 font-bold text-lime-50 ${buttonSize} border-solid  border-lime-700`;
+      return `${commonStyles} bg-lime-500 text-lime-50  border-lime-700`;
     default:
-      return `capitalize flex flex-row justify-center items-center   max-w-fit  w-full bg-cyan-100 font-bold text-cyan-900 ${buttonSize} border-solid  border-cyan-900`;
+      return `${commonStyles} bg-cyan-100 text-cyan-900  border-cyan-900`;
   }
 };
 

@@ -20,19 +20,25 @@ function Input({
   inputRef,
   register,
   errorMessage,
+  rightIcon,
+  leftIcon,
   ...props
 }: InputProps) {
   const { inputContainer, labelStyle, inputStyle, errorMessageStyle } =
     getBaseInputStyles(!errorMessage ? false : true);
 
   return (
-    <div className={`${inputContainer}`}>
+    <div className={`${inputContainer} relative`}>
       <label className={`${labelStyle}`}>{label}</label>
       <input
         type={type}
         placeholder={placeholder}
-        className={`${inputStyle}`}
+        className={`${inputStyle} ${rightIcon ? "pr-10" : ""} ${
+          leftIcon ? "pl-10" : ""
+        } ${className}`}
       />
+      {leftIcon && leftIcon}
+      {rightIcon && rightIcon}
       <p className={`${errorMessageStyle}`}>{errorMessage}</p>
     </div>
   );

@@ -2,7 +2,7 @@ import { UseFormRegister } from "react-hook-form";
 
 export type InputProps = {
   label?: string;
-  placeholder: string;
+  placeholder?: string;
   value?: string;
   onChange?: () => void;
   onBlur?: () => void;
@@ -10,7 +10,7 @@ export type InputProps = {
   disabled?: boolean;
   readOnly?: boolean;
   required?: boolean;
-  type: string;
+  type?: string;
   name?: string;
   id?: string;
   className?: string;
@@ -18,4 +18,6 @@ export type InputProps = {
   inputRef?: React.RefObject<HTMLInputElement>;
   register?: UseFormRegister<any>;
   errorMessage?: string;
+  rightIcon?: React.ReactNode;
+  leftIcon?: React.ReactNode;
 };

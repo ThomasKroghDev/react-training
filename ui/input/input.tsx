@@ -22,6 +22,7 @@ function Input({
   errorMessage,
   rightIcon,
   leftIcon,
+  pattern,
   ...props
 }: InputProps) {
   const { inputContainer, labelStyle, inputStyle, errorMessageStyle } =
@@ -31,11 +32,13 @@ function Input({
     <div className={`${inputContainer} relative`}>
       <label className={`${labelStyle}`}>{label}</label>
       <input
+        {...props}
         type={type}
         placeholder={placeholder}
         className={`${inputStyle} ${rightIcon ? "pr-10" : ""} ${
           leftIcon ? "pl-10" : ""
         } ${className}`}
+        onChange={onChange}
       />
       {leftIcon && leftIcon}
       {rightIcon && rightIcon}

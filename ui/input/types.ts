@@ -4,7 +4,8 @@ export type InputProps = {
   label?: string;
   placeholder?: string;
   value?: string;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   onBlur?: () => void;
   onFocus?: () => void;
   disabled?: boolean;
@@ -20,4 +21,9 @@ export type InputProps = {
   errorMessage?: string;
   rightIcon?: React.ReactNode;
   leftIcon?: React.ReactNode;
+  min?: string;
+  max?: string;
+  step?: string;
+  inputmode?: string;
+  pattern?: string;
 };

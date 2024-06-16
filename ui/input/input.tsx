@@ -8,6 +8,7 @@ function Input({
   value,
   onChange,
   onBlur,
+  onKeyPress,
   onFocus,
   disabled,
   readOnly,
@@ -38,7 +39,10 @@ function Input({
         className={`${inputStyle} ${rightIcon ? "pr-10" : ""} ${
           leftIcon ? "pl-10" : ""
         } ${className}`}
+        value={value}
         onChange={onChange}
+        onBlur={onBlur}
+        onKeyPress={onKeyPress}
       />
       {leftIcon && leftIcon}
       {rightIcon && rightIcon}

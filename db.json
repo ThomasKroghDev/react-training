@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "email": "test@test.mail.com",
+      "password": "test",
+      "amount": "10.10"
+    },
+    {
+      "id": "c5fc",
+      "email": "wee@woo.com",
+      "password": "123",
+      "amount": "0.00"
+    }
+  ]
+}

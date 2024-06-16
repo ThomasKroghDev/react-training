@@ -8,7 +8,11 @@ import LockIcon from "../icons/lock-icon";
 
 export const PasswordInput = (props: InputProps) => {
   const [visible, setVisible] = React.useState(false);
-  const { label, placeholder } = props;
+  const { label, placeholder, onChange } = props;
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChange?.(event);
+  };
+
   return (
     <Input
       {...{
@@ -16,6 +20,8 @@ export const PasswordInput = (props: InputProps) => {
         label: label || "Password",
         placeholder: placeholder || "Enter your password",
         type: visible ? "text" : "password",
+        name: "password",
+        onChange: handleChange,
         leftIcon: <LockIcon className="absolute top-1/2 left-4" />,
         rightIcon: (
           <VisibilityToggle
